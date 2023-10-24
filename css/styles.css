@@ -1,10 +1,45 @@
+:root {
+    --orangeColor: hsl(26, 100%, 55%);
+    --orangeBackground: hsl(25, 100%, 94%);
+    --blackColor: black;
+    --whiteColor: white;
+    --grayColor: #69707D;
+}
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
 body {
     margin: 0;
     max-width: 100%;
 }
 
-.img-product1 {
+.img-product-1 {
     width: 100%;
     object-fit: cover;
     
+}
+
+.product-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+    
+}
+.product-description p {
+    line-height: 1.6;
+    color: var(--grayColor);
+}
+.product-description h1,
+.product-description p {
+    margin: 0;
+}
+
+.product-description span {
+    color: var(--orangeColor);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
 }
