@@ -23,3 +23,30 @@ stock_selector_div.addEventListener('click', function(e){
         counter.textContent = parseInt(counter.textContent) + 1
     }
 })
+
+
+function addElementsToCart(n, itemObj){
+    // ItemObj should have the following structure
+    // {price, title, image(url or image)}
+
+}
+// Add to cart button functionality
+const add_to_cart_button = document.querySelector('#add-to-cart')
+
+
+add_to_cart_button.addEventListener('click', function(e){
+    e.preventDefault()
+    const counter = document.querySelector('.stock-selector .stock-counter')
+
+    const howManyItems = parseInt(counter.textContent)
+
+    if (howManyItems <= 0){
+        alert('You can not add 0 or less items to the cart.')
+    }else{
+        const itemObj = {
+            price: 125,
+            title: 'Fall Limited Edition Sneakers',
+            image: 'images/image-product-2-thumbnail.jpg'
+        }
+        addElementsToCart(howManyItems, itemObj)   
+    }})
