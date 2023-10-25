@@ -85,9 +85,69 @@ stock_selector_div.addEventListener('click', function(e){
 })
 
 
-function addElementsToCart(n, itemObj){
+function addElementsToCart(itemObj){
     // ItemObj should have the following structure
     // {price, title, image(url or image)}
+
+    // More work should be done on this, regarding css classes.
+    let displayCart = document.querySelector('.cart-product-container')
+    // Creating the checkout div.
+    if (document.querySelector('#product')){
+        let itemsInCart = parseInt(document.querySelector('.units').innerText)
+        let newTotal = itemObj.n + itemsInCart
+        document.querySelector('.price').innerHTML = `$${itemObj.price} x <span class="units">${newTotal}</span> <span class="total-price">$${newTotal * itemObj.price}</span>`
+
+    }else{
+        let itemDiv = document.createElement('div')
+        itemDiv.classList.add('cart')
+        itemDiv.setAttribute('id', 'product')
+
+        // Creating the price element
+        let priceElement = document.createElement('p')
+        priceElement.classList.add('price')
+        priceElement.innerHTML = `$${itemObj.price} x <span class="units">${itemObj.n}</span> <span class="total-price">$${itemObj.n * itemObj.price}</span>`
+        // Creating the title element
+        let titleElement = document.createElement('p')
+        titleElement.innerText = itemObj.title
+
+        // Creating an information div.
+
+        let informationDiv = document.createElement('div')
+        informationDiv.appendChild(titleElement)
+        informationDiv.appendChild(priceElement)
+
+        // Creating the img element
+        let imgElement = document.createElement('img')
+        imgElement.setAttribute('src', itemObj.image)
+        imgElement.classList.add('thumbnail-product')
+
+        // Garbage can element
+        let garbageCan = document.createElement('img')
+        garbageCan.setAttribute('src', './images/icon-delete.svg')
+
+
+        // Putting all together
+        itemDiv.appendChild(imgElement)
+        itemDiv.appendChild(informationDiv)
+        itemDiv.appendChild(garbageCan)
+
+        // Removing the your cart is empty display.
+        let emptyCarItem = document.querySelector('#empty-car')
+        emptyCarItem.classList.add('hidden')
+
+        // Appending the item to the display cart
+
+        displayCart.appendChild(itemDiv)
+
+        // Creating the button.
+        let checkoutButton = document.createElement('button')
+        checkoutButton.classList.add('checkout-button')
+
+        checkoutButton.innerText = 'Checkout'
+
+        displayCart.appendChild(checkoutButton)
+
+    }
 
 }
 // Add to cart button functionality
@@ -106,7 +166,8 @@ add_to_cart_button.addEventListener('click', function(e){
         const itemObj = {
             price: 125,
             title: 'Fall Limited Edition Sneakers',
-            image: 'images/image-product-2-thumbnail.jpg'
+            image: 'images/image-product-2-thumbnail.jpg',
+            n: howManyItems
         }
-        addElementsToCart(howManyItems, itemObj)   
+        addElementsToCart(itemObj)   
     }})
