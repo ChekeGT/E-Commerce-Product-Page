@@ -113,3 +113,22 @@ ul{
     min-width: 15px;
     height: auto;
 }
+/* Hamburger button functionality */
+
+.reveal-hidden-links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 60%;
+    height: 130vh;
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    z-index: 1;
+}
+.blur{
+    filter: blur(5px)
+}
