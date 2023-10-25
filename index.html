@@ -22,7 +22,17 @@
   <header>
     <nav>
       <ul>
-        <div class="container">
+        <div class="left-container">
+          <li>
+            <a id="hamburger-button">
+              <div class="hamburger-button-line"></div>
+              <div class="hamburger-button-line"></div>
+              <div class="hamburger-button-line"></div>
+            </a>
+          </li>
+          <li>
+            <img src="images/logo.svg" alt="Sneakers logo">
+          </li>
           <div class="pages-links-container">
             <li>
               <a href="#">Collections</a>
@@ -40,26 +50,16 @@
               <a href="#">Contact</a>
             </li>
           </div>
-          <li>
-            <a id="hamburger-button">
-              <div class="hamburger-button-line"></div>
-              <div class="hamburger-button-line"></div>
-              <div class="hamburger-button-line"></div>
-            </a>
-          </li>
-          <li>
-            <img src="images/logo.svg" alt="Sneakers logo">
-          </li>
         </div>
-        <div class="container">
-          <li>
+        <div class="right-container">
+          <li class="cart-icon-container">
             <a id="cart-button">
-              <img src="images/icon-cart.svg" alt="See your cart">
+              <img src="images/icon-cart.svg" class="cart-icon" alt="See your cart">
             </a>
           </li>
-          <li>
+          <li class="profile-photo-container">
             <a>
-              <img src="images/image-avatar.png" alt="Profile photo">
+              <img class="profile-photo" src="images/image-avatar.png" alt="Profile photo">
             </a>
           </li>
         </div>  
@@ -88,7 +88,7 @@
         <p class="stock-counter">0</p>
         <a href="#" class="plus-button"><img class="plus-button" src="images/icon-plus.svg" alt="Plus button"></a>
       </div>
-      <a href="#" id="add-to-cart">
+      <a href="#"id="add-to-cart">
         <img src="images/icon-cart.svg" alt="Cart icon">
         <p>Add to cart</p>
       </a>
