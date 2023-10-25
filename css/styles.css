@@ -13,6 +13,9 @@ body {
     margin: 0;
     max-width: 100%;
 }
+hr {
+    margin: 0;
+}
 a, a:link, a:hover, a:active, a:focus, a:visited{
     text-decoration: none;
     color: inherit;
@@ -80,13 +83,25 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
     top: 5%;
     left: 2%;
     right: 2%;
-    bottom: 10%;
+    bottom: 12%;
     width: 96%;
-    height: 85%;
+    height: 83%;
     background-color: white;
     border-radius: 10px;
 }
-
+.display-cart h2 {
+    padding-left: 20px;
+}
+.cart-product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+.cart-product-container p {
+    color: var(--grayColor);
+    font-weight: bold;
+}
 
 
 
