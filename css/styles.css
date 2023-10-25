@@ -74,6 +74,20 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
     font-size: 12px;
 }
 
+/* DisplayCart Styles */
+.display-cart {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    right: 2%;
+    bottom: 10%;
+    width: 96%;
+    height: 85%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
 
 
 /* Hamburger button styles */
