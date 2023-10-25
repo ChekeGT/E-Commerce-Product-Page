@@ -123,7 +123,8 @@ function addElementsToCart(itemObj){
 
         // Garbage can element
         let garbageCan = document.createElement('img')
-        garbageCan.setAttribute('src', './images/icon-delete.svg')
+        garbageCan.setAttribute('src', './images/icon-delete.svg');
+        garbageCan.classList.add('gargabe-can');
 
 
         // Putting all together
@@ -171,3 +172,18 @@ add_to_cart_button.addEventListener('click', function(e){
         }
         addElementsToCart(itemObj)   
     }})
+
+// Delete products from the cart (Garbage Can button)
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('gargabe-can')) {
+        const emptyCar = document.querySelector('#empty-car');
+        
+        const itemDiv = e.target.parentElement;
+        const cartContainer = itemDiv.parentElement;
+        const checkoutBtn = cartContainer.lastElementChild;
+
+        checkoutBtn.remove();
+        itemDiv.remove();    
+        emptyCar.classList.remove('hidden')
+    }
+});
