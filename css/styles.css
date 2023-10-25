@@ -17,10 +17,37 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
     text-decoration: none;
     color: inherit;
 }
+/* PRODUCT DESCRIPTION STYLES */
+.img-product-container {
+    position: relative;
+}
+
+.next-icon-product {
+    position: absolute;
+    width: 10px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--whiteColor);
+    padding: 10px 12px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.previous-icon-product {
+    position: absolute;
+    width: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--whiteColor);
+    padding: 10px 12px;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
 .img-product-1 {
     width: 100%;
     object-fit: cover;
-    
 }
 
 .product-description {
@@ -46,6 +73,8 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
     letter-spacing: 2px;
     font-size: 12px;
 }
+
+
 
 /* Hamburger button styles */
 header, nav {
