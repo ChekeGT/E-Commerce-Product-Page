@@ -158,8 +158,9 @@ const add_to_cart_button = document.querySelector('#add-to-cart')
 add_to_cart_button.addEventListener('click', function(e){
     e.preventDefault()
     const counter = document.querySelector('.stock-selector .stock-counter')
-
+    
     const howManyItems = parseInt(counter.textContent)
+    
 
     if (howManyItems <= 0){
         alert('You can not add 0 or less items to the cart.')
@@ -187,3 +188,14 @@ document.addEventListener('click', function (e) {
         emptyCar.classList.remove('hidden')
     }
 });
+
+//Show/Hidden displayCart with icon cart button  
+const cartBtn = document.querySelector('#cart-button');
+const displayCart = document.querySelector('.display-cart');
+cartBtn.addEventListener('click', function() {
+    if(displayCart.classList.contains('hidden')){
+        displayCart.classList.remove('hidden');
+    } else {
+        displayCart.classList.add('hidden');
+    }
+})
