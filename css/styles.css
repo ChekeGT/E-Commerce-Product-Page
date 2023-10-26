@@ -160,6 +160,11 @@ header{
     height: 3px;
     background: var(--grayColor);
 }
+@media (min-width: 1000px){
+    #hamburger-button{
+        display: none;
+    }
+}
 /* Navigation bar styles */
 ul{
     display: flex;
@@ -219,6 +224,30 @@ ul{
     max-width: 21.82px;
     min-width: 15px;
     height: auto;
+}
+@media (min-width: 1000px){
+    .left-container{
+        flex-direction: row-reverse;
+    }
+    .pages-links-container{
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .pages-links-container a, .pages-links-container li, .pages-links-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .pages-links-container a:hover{
+        border-bottom: 1px solid var(--orangeColor);
+    }
+    .left-container{
+        justify-content: flex-end;
+    }
+    ul{
+        width: 90%;
+        justify-content: space-between;
+    }
 }
 /* Hamburger button functionality */
 

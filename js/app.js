@@ -216,7 +216,3 @@ cartBtn.addEventListener('click', function() {
         displayCart.classList.add('hidden');
     }
 })
-
-
-
-
