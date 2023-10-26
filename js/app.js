@@ -149,6 +149,9 @@ function addElementsToCart(itemObj){
         displayCart.appendChild(checkoutButton)
 
     }
+    // Resseting the counter of items
+    const counter = document.querySelector('.stock-selector .stock-counter')
+    counter.innerText = 0
 
 }
 // Add to cart button functionality
