@@ -48,7 +48,10 @@ const closeIcon = document.querySelector('#close-icon');
 const lbContainer = document.querySelector('#lb-container');
 
 imgProduct.addEventListener('click', () => {
-    lbContainer.classList.remove('disable-fixed');
+    let screenWidth = window.innerWidth
+    if (screenWidth > 1000){
+        lbContainer.classList.remove('disable-fixed');
+    }
 })
 closeIcon.addEventListener('click', () => {
     lbContainer.classList.add('disable-fixed');
