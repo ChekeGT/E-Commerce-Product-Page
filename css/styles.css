@@ -20,6 +20,8 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
     text-decoration: none;
     color: inherit;
 }
+
+
 /* PRODUCT DESCRIPTION STYLES */
 .img-product-container {
     position: relative;
@@ -80,15 +82,14 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
 /* DisplayCart Styles */
 .display-cart {
     position: absolute;
-    right: 8px;
-    top: 5px;
-    width: 96%;
-    height: 83%;
+    top: 50px;
+    left: -260px;
+    width: 360px;
+    height: 256px;
     background-color: white;
     border-radius: 10px;
-    max-width: 360px;
-    max-height: 256px;
     padding-bottom: 2.5rem;
+    z-index: 9999;
 }
 .display-cart h2 {
     padding-left: 20px;
@@ -331,3 +332,40 @@ ul{
     max-height: 20px;
     fill: #ffffff;
 }
+/* Styles for the main page */
+@media (min-width: 1000px){
+    main{
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .left-side-main{
+        width: 50%;
+    }
+    .right-side-main{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price-container{
+        margin: 0;
+        width: 40%;
+        flex-wrap: wrap;
+        padding-left:20px;
+    }
+    .shopping{
+        display: flex;
+        gap: 4rem;
+        width: 100%;
+        padding-left: 20px;
+        align-items: center;
+    }
+    .stock-selector{
+        max-height: 52px;
+        border-radius: 30px;
+    }
+} 

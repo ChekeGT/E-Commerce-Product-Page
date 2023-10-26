@@ -55,6 +55,15 @@
           <li class="cart-icon-container">
             <a id="cart-button">
               <img src="images/icon-cart.svg" class="cart-icon" alt="See your cart">
+              <div class="display-cart hidden">
+                <div>
+                    <h2>Cart</h2>
+                </div>
+                
+                <div class="cart-product-container">
+                  <p id="empty-car">Your cart is empty.</p>
+                </div>
+            </div>
             </a>
             <div id="notification-cart" class=""></div>
           </li>
@@ -68,46 +77,38 @@
     </nav>
   </header>
   <main>
-    <div>
-      <div class="img-product-container">
-        <img id="imgProduct" class="img-product-1" src="./images/image-product-1.jpg" alt="">
-        <img id="nextBtn" class="next-icon-product" src="./images/icon-next.svg" alt="">
-        <img id="previousBtn" class="previous-icon-product" src="./images/icon-previous.svg" alt="">
-        <div class="display-cart hidden">
-            <div>
-                <h2>Cart</h2>
-            </div>
-            
-            <div class="cart-product-container">
-              <p id="empty-car">Your cart is empty.</p>
-            </div>
+      <div class="left-side-main">
+        <div class="img-product-container">
+          <img id="imgProduct" class="img-product-1" src="./images/image-product-1.jpg" alt="">
+          <img id="nextBtn" class="next-icon-product" src="./images/icon-next.svg" alt="">
+          <img id="previousBtn" class="previous-icon-product" src="./images/icon-previous.svg" alt="">
+        </div>  
+      </div>
+      <div class="right-side-main">
+        <div class="product-description">
+          <span>Sneaker Company</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        </div>
+        <div class="price-container">
+          <div class="price-and-discount">
+            <p class="offer-price">$125.00</p>
+            <p class="discount">50%</p>
+          </div>
+          <p class="discounted-price">$250.00</p>
+        </div>
+        <div class="shopping">
+          <div class="stock-selector">
+            <a href="#" class="minus-button"><img class="minus-button" src="images/icon-minus.svg" alt="Minus-button"></a>
+            <p class="stock-counter">0</p>
+            <a href="#" class="plus-button"><img class="plus-button" src="images/icon-plus.svg" alt="Plus button"></a>
+          </div>
+          <a href="#"id="add-to-cart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"  fill-rule="nonzero"/></svg>
+            <p>Add to cart</p>
+          </a>
         </div>
       </div>
-      
-      <div class="product-description">
-        <span>Sneaker Company</span>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      </div>
-      <div class="price-container">
-        <div class="price-and-discount">
-          <p class="offer-price">$125.00</p>
-          <p class="discount">50%</p>
-        </div>
-        <p class="discounted-price">$250.00</p>
-      </div>
-    </div>
-    <div class="shopping">
-      <div class="stock-selector">
-        <a href="#" class="minus-button"><img class="minus-button" src="images/icon-minus.svg" alt="Minus-button"></a>
-        <p class="stock-counter">0</p>
-        <a href="#" class="plus-button"><img class="plus-button" src="images/icon-plus.svg" alt="Plus button"></a>
-      </div>
-      <a href="#"id="add-to-cart">
-        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"  fill-rule="nonzero"/></svg>
-        <p>Add to cart</p>
-      </a>
-    </div>
   </main>
 
   <div class="attribution">
