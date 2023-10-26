@@ -80,14 +80,15 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
 /* DisplayCart Styles */
 .display-cart {
     position: absolute;
-    top: 5%;
-    left: 2%;
-    right: 2%;
-    bottom: 12%;
+    right: 8px;
+    top: 5px;
     width: 96%;
     height: 83%;
     background-color: white;
     border-radius: 10px;
+    max-width: 360px;
+    max-height: 256px;
+    padding-bottom: 2.5rem;
 }
 .display-cart h2 {
     padding-left: 20px;
@@ -111,9 +112,10 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
 }
 
 .cart {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     
 }
 .cart-description p {
@@ -128,6 +130,7 @@ a, a:link, a:hover, a:active, a:focus, a:visited{
 .thumbnail-product {
     width: 50px;
     height: 50px;
+    border-radius: 5px;
 }
 .checkout-button {
     padding: 20px;

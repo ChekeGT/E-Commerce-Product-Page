@@ -115,6 +115,7 @@ function addElementsToCart(itemObj){
         let informationDiv = document.createElement('div')
         informationDiv.appendChild(titleElement)
         informationDiv.appendChild(priceElement)
+        informationDiv.classList.add('article-information-container')
 
         // Creating the img element
         let imgElement = document.createElement('img')
