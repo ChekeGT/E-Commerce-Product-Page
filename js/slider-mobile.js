@@ -49,7 +49,7 @@ const lbContainer = document.querySelector('#lb-container');
 
 imgProduct.addEventListener('click', () => {
     let screenWidth = window.innerWidth
-    if (screenWidth > 1000){
+    if (screenWidth >= 1000){
         lbContainer.classList.remove('disable-fixed');
     }
 })
