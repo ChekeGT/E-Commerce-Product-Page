@@ -153,7 +153,8 @@ function addElementsToCart(itemObj){
 }
 // Add to cart button functionality
 const add_to_cart_button = document.querySelector('#add-to-cart')
-
+const notification = document.querySelector('#notification-cart');
+let totalNotifications = 0;
 
 add_to_cart_button.addEventListener('click', function(e){
     e.preventDefault()
@@ -161,6 +162,8 @@ add_to_cart_button.addEventListener('click', function(e){
     
     const howManyItems = parseInt(counter.textContent)
     
+    
+
 
     if (howManyItems <= 0){
         alert('You can not add 0 or less items to the cart.')
@@ -171,8 +174,16 @@ add_to_cart_button.addEventListener('click', function(e){
             image: 'images/image-product-2-thumbnail.jpg',
             n: howManyItems
         }
-        addElementsToCart(itemObj)   
-    }})
+        addElementsToCart(itemObj);
+        notification.classList.add('notification-cart');
+        totalNotifications += howManyItems;
+        notification.textContent = totalNotifications;
+
+    }
+
+
+
+})
 
 // Delete products from the cart (Garbage Can button)
 document.addEventListener('click', function (e) {
@@ -194,8 +205,15 @@ const cartBtn = document.querySelector('#cart-button');
 const displayCart = document.querySelector('.display-cart');
 cartBtn.addEventListener('click', function() {
     if(displayCart.classList.contains('hidden')){
+        notification.classList.remove('notification-cart');
+        notification.textContent = ''
         displayCart.classList.remove('hidden');
+
     } else {
         displayCart.classList.add('hidden');
     }
 })
+
+
+
+

@@ -200,6 +200,19 @@ ul{
     width: 30%;
     max-width: 21.82px;
     min-width: 15px;
+    position: relative;
+}
+.notification-cart {
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    top: -30%;
+    right: -5%;
+    background-color: var(--orangeColor);
+    font-size: 10px;
+    text-align: center;
+    color: var(--whiteColor);
+    border-radius: 10px;
 }
 .cart-icon{
     width: 80%;
