@@ -212,7 +212,6 @@ cartBtn.addEventListener('click', function() {
         notification.classList.remove('notification-cart');
         notification.textContent = ''
         displayCart.classList.remove('hidden');
-
     } else {
         displayCart.classList.add('hidden');
     }
