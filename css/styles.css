@@ -229,3 +229,60 @@ ul{
 .hidden{
     display: none;   
 }
+
+/* Styles for pricing */
+.price-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+.price-and-discount{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.offer-price{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.discount{
+    background-color: var(--orangeBackground);
+    color: var(--orangeColor);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+.discounted-price{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: var(--grayColor);
+    text-decoration: line-through;
+}
+.stock-selector{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #F6F8FD;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+#add-to-cart{
+    display: flex;
+    width: 80%;
+    margin: 1.5rem auto;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--orangeColor);
+    border-radius: 10px;
+    color: #fff;
+}
+#add-to-cart svg{
+    width: 20%;
+    max-width: 21.82px;
+    max-height: 20px;
+    fill: #ffffff;
+}
